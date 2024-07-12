@@ -101,9 +101,9 @@ onMounted(async () => {
 
     <div class="p-4">
       <div class="flex flex-row items-center justify-center  gap-3 my-3">
-        <a class="" href="https://github.com/unilei/aipan-netdisk-search">
+        <!-- <a class="" href="https://github.com/unilei/aipan-netdisk-search">
           <img class="w-[30px] h-[30px]" src="@/assets/skill-icons--github-dark.svg" alt="github">
-        </a>
+        </a> -->
         <el-button link color="#ffffff" @click="donate()">
           <img class="w-[30px] h-[30px]" src="@/assets/donation/dashang.svg" alt="打赏">
         </el-button>
