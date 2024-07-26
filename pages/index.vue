@@ -41,14 +41,14 @@ onMounted(async () => {
   }
 
    // Add ad script
-   const script = document.createElement('script');
+  const script = document.createElement('script');
   script.innerHTML = `
     atOptions = {
-      'key' : '48dfbbdc82cca3ac0986aced4bbd28ea',
-		  'format' : 'iframe',
-		  'height' : 90,
-		  'width' : 728,
-		  'params' : {}
+      'key' : '36067b6b90544153eabddefba54ef167',
+	  	'format' : 'iframe',
+	  	'height' : 60,
+	  	'width' : 468,
+	  	'params' : {}
     };
   `;
   document.head.appendChild(script);
