@@ -1,5 +1,5 @@
 <script setup>
-import {useDoubanStore} from "~/stores/douban";
+import { useDoubanStore } from "~/stores/douban";
 
 definePageMeta({
   layout: 'custom',
@@ -12,10 +12,10 @@ const doubanCache = useCookie('doubanCache', {
 })
 
 const search = (keyword) => {
-  router.push({path: '/search', query: {keyword: encodeURIComponent(keyword)}})
+  router.push({ path: '/search', query: { keyword: encodeURIComponent(keyword) } })
 }
 const donate = () => {
-  router.push({path: '/donate'})
+  router.push({ path: '/donate' })
 }
 const hotKeywords = ref(['庆余年', '歌手2024', '我的阿勒泰', '新生', '周处除三害', '热辣滚烫', '第二十条', '承欢记', '哈哈哈哈哈'])
 const doubanData = ref([])
@@ -28,7 +28,7 @@ const colorMode = useColorMode()
 
 const goDouban = (movie) => {
   // window.open(movie.url, '_blank')
-  router.push({path: '/search', query: {keyword: encodeURIComponent(movie.title)}})
+  router.push({ path: '/search', query: { keyword: encodeURIComponent(movie.title) } })
 }
 
 onMounted(async () => {
@@ -44,16 +44,8 @@ onMounted(async () => {
 
 <template>
   <div class="bg-[#ffffff] dark:bg-gray-800  min-h-screen py-[60px]">
-    <script type="text/javascript">
-	atOptions = {
-		'key' : '36067b6b90544153eabddefba54ef167',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.topcreativeformat.com/36067b6b90544153eabddefba54ef167/invoke.js"></script>
+    <script type="text/javascript"
+      src="//www.topcreativeformat.com/36067b6b90544153eabddefba54ef167/invoke.js"></script>
     <div class="max-w-[1240px] mx-auto text-right px-[20px]">
       <client-only>
         <el-button v-if="colorMode.preference === 'dark'" link @click="colorMode.preference = 'light'">
@@ -68,30 +60,15 @@ onMounted(async () => {
       <img class="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px]" src="@/assets/my-logo.png" alt="logo">
       <h1 class="text-[18px] sm:text-[22px] font-serif font-bold dark:text-white ">搜网盘-热门美剧电影综艺动漫韩剧日剧英剧-网盘资源搜索</h1>
     </div>
-
-    <script type="text/javascript">
-	atOptions = {
-		'key' : '36067b6b90544153eabddefba54ef167',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.topcreativeformat.com/36067b6b90544153eabddefba54ef167/invoke.js"></script>
+    <script type="text/javascript"
+      src="/public/banner.js"></script>
+    <script type="text/javascript"
+      src="//www.topcreativeformat.com/36067b6b90544153eabddefba54ef167/invoke.js"></script>
     <div class="max-w-[1240px] mx-auto mt-[20px]">
-      <div
-          class="w-[80%] md:w-[700px] mx-auto">
+      <div class="w-[80%] md:w-[700px] mx-auto">
         <client-only>
-          <el-input
-              v-model="searchKeyword"
-              placeholder="请输入关键词搜索"
-              @keydown.enter="search(searchKeyword)"
-              prefix-icon="Search"
-              size="large"
-              input-style=" height: 48px;"
-              clearable
-          >
+          <el-input v-model="searchKeyword" placeholder="请输入关键词搜索" @keydown.enter="search(searchKeyword)"
+            prefix-icon="Search" size="large" input-style=" height: 48px;" clearable>
           </el-input>
         </client-only>
       </div>
@@ -101,15 +78,10 @@ onMounted(async () => {
       <h1 class="text-[12px] sm:text-sm text-slate-600 font-bold dark:text-white mt-[20px]">豆瓣热门影视榜单</h1>
       <div class="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-8  gap-3  mt-[10px]">
         <div
-            class="mx-1 cursor-pointer truncate text-xs font-bold dark:bg-slate-700 dark:text-slate-100 rounded-[5px] p-2"
-            v-for="(movie,index) in doubanData"
-            :key="index"
-            type="info"
-            @click="goDouban(movie)"
-        >
+          class="mx-1 cursor-pointer truncate text-xs font-bold dark:bg-slate-700 dark:text-slate-100 rounded-[5px] p-2"
+          v-for="(movie, index) in doubanData" :key="index" type="info" @click="goDouban(movie)">
           <img class="w-full h-[180px] lg:h-[220px] xl:h-[161px] rounded-[5px] object-cover"
-               :src="'https://images.weserv.nl/?url='+ movie.cover"
-               alt="" referrerpolicy="never">
+            :src="'https://images.weserv.nl/?url=' + movie.cover" alt="" referrerpolicy="never">
           <p class="mt-1  text-center truncate">
             {{ movie.title }}
             {{ movie.rate }}
@@ -132,12 +104,12 @@ onMounted(async () => {
       </p>
     </div>
 
-    
+
   </div>
 </template>
 
 <style scoped>
- :deep(.el-input__wrapper.is-focus) {
-   --el-input-focus-border-color: #6648ff;
- }
+:deep(.el-input__wrapper.is-focus) {
+  --el-input-focus-border-color: #6648ff;
+}
 </style>
