@@ -40,6 +40,13 @@ onMounted(async () => {
     doubanCache.value = 'exist'
   }
 
+   // Add new script to <head>
+    const headScript = document.createElement('script');
+  headScript.type = 'text/javascript';
+  headScript.src = '//pl23847479.highrevenuenetwork.com/fd/65/aa/fd65aaa51ba97f33fa839557929e314a.js';
+  document.head.appendChild(headScript);
+
+
   // Add ad script
   const script = document.createElement('script');
   script.innerHTML = `
@@ -55,27 +62,27 @@ onMounted(async () => {
 
 
   // Add side ad scripts
-  const sideScript = document.createElement('script');
-  sideScript.innerHTML = `
-    atOptions = {
-      'key' : 'dadd81d317149856ad54536ba36c5b40',
-      'format' : 'iframe',
-      'height' : 600,
-      'width' : 160,
-      'params' : {}
-    };
-  `;
-  document.head.appendChild(sideScript);
+  // const sideScript = document.createElement('script');
+  // sideScript.innerHTML = `
+  //   atOptions = {
+  //     'key' : 'dadd81d317149856ad54536ba36c5b40',
+  //     'format' : 'iframe',
+  //     'height' : 600,
+  //     'width' : 160,
+  //     'params' : {}
+  //   };
+  // `;
+  // document.head.appendChild(sideScript);
 
-  const leftAdScript = document.createElement('script');
-  leftAdScript.src = '//www.topcreativeformat.com/dadd81d317149856ad54536ba36c5b40/invoke.js';
-  leftAdScript.async = true;
-  document.getElementById('left-ad-container').appendChild(leftAdScript);
+  // const leftAdScript = document.createElement('script');
+  // leftAdScript.src = '//www.topcreativeformat.com/dadd81d317149856ad54536ba36c5b40/invoke.js';
+  // leftAdScript.async = true;
+  // document.getElementById('left-ad-container').appendChild(leftAdScript);
 
-  const rightAdScript = document.createElement('script');
-  rightAdScript.src = '//www.topcreativeformat.com/dadd81d317149856ad54536ba36c5b40/invoke.js';
-  rightAdScript.async = true;
-  document.getElementById('right-ad-container').appendChild(rightAdScript);
+  // const rightAdScript = document.createElement('script');
+  // rightAdScript.src = '//www.topcreativeformat.com/dadd81d317149856ad54536ba36c5b40/invoke.js';
+  // rightAdScript.async = true;
+  // document.getElementById('right-ad-container').appendChild(rightAdScript);
 
 
   const adScript = document.createElement('script');
