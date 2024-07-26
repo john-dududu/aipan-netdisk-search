@@ -44,11 +44,11 @@ onMounted(async () => {
    const script = document.createElement('script');
   script.innerHTML = `
     atOptions = {
-      'key' : '36067b6b90544153eabddefba54ef167',
-      'format' : 'iframe',
-      'height' : 60,
-      'width' : 468,
-      'params' : {}
+      'key' : '48dfbbdc82cca3ac0986aced4bbd28ea',
+		  'format' : 'iframe',
+		  'height' : 90,
+		  'width' : 728,
+		  'params' : {}
     };
   `;
   document.head.appendChild(script);
@@ -57,14 +57,23 @@ onMounted(async () => {
   adScript.src = '//www.topcreativeformat.com/36067b6b90544153eabddefba54ef167/invoke.js';
   adScript.async = true;
   document.getElementById('ad-container').appendChild(adScript);
+ 
+  // Add new script before </body>
+  const newScript = document.createElement('script');
+  newScript.type = 'text/javascript';
+  newScript.src = '//pl23847459.highrevenuenetwork.com/c9/dd/2c/c9dd2cec63b70fe295a2c5ed2fa110bf.js';
   
+  // Use nextTick to ensure the DOM is fully rendered
+  nextTick(() => {
+    document.body.appendChild(newScript);
+  });
+
 })
 </script>
 
 <template>
   <div class="bg-[#ffffff] dark:bg-gray-800  min-h-screen py-[60px]">
-  <!-- Ad script -->
-    <div id="ad-container"></div>
+
     <div class="max-w-[1240px] mx-auto text-right px-[20px]">
       <client-only>
         <el-button v-if="colorMode.preference === 'dark'" link @click="colorMode.preference = 'light'">
@@ -88,7 +97,8 @@ onMounted(async () => {
         </client-only>
       </div>
     </div>
-
+    <!-- Ad script -->
+    <div id="ad-container"></div>
     <div class="mx-5 xl:max-w-[1200px] xl:mx-auto mt-[50px]" v-if="doubanData.length > 0">
       <h1 class="text-[12px] sm:text-sm text-slate-600 font-bold dark:text-white mt-[20px]">豆瓣热门影视榜单</h1>
       <div class="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-8  gap-3  mt-[10px]">
