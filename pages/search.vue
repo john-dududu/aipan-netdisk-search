@@ -127,7 +127,7 @@ onMounted(() => {
         </el-button>
       </div>
             <!-- Ad script -->
-      <div id="ad-container"></div>
+      <div id="ad-container" class="my-8 flex justify-center"></div>
       <div v-if="category === 'clouddrive'"
            class="w-full space-y-3 p-3 ">
         <disk-info-list
