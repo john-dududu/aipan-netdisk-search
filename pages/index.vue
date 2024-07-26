@@ -39,13 +39,32 @@ onMounted(async () => {
     doubanData.value = doubanStore.doubanData
     doubanCache.value = 'exist'
   }
+
+   // Add ad script
+   const script = document.createElement('script');
+  script.innerHTML = `
+    atOptions = {
+      'key' : '36067b6b90544153eabddefba54ef167',
+      'format' : 'iframe',
+      'height' : 60,
+      'width' : 468,
+      'params' : {}
+    };
+  `;
+  document.head.appendChild(script);
+
+  const adScript = document.createElement('script');
+  adScript.src = '//www.topcreativeformat.com/36067b6b90544153eabddefba54ef167/invoke.js';
+  adScript.async = true;
+  document.getElementById('ad-container').appendChild(adScript);
+  
 })
 </script>
 
 <template>
   <div class="bg-[#ffffff] dark:bg-gray-800  min-h-screen py-[60px]">
-    <script type="text/javascript"
-      src="//www.topcreativeformat.com/36067b6b90544153eabddefba54ef167/invoke.js"></script>
+  <!-- Ad script -->
+    <div id="ad-container"></div>
     <div class="max-w-[1240px] mx-auto text-right px-[20px]">
       <client-only>
         <el-button v-if="colorMode.preference === 'dark'" link @click="colorMode.preference = 'light'">
@@ -58,12 +77,8 @@ onMounted(async () => {
     </div>
     <div class="flex flex-row items-center justify-center gap-3 mt-[80px]">
       <img class="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px]" src="@/assets/my-logo.png" alt="logo">
-      <h1 class="text-[18px] sm:text-[22px] font-serif font-bold dark:text-white ">搜网盘-热门美剧电影综艺动漫韩剧日剧英剧-网盘资源搜索</h1>
+      <h1 class="text-[18px] sm:text-[22px] font-serif font-bold dark:text-white "> 搜网盘-热门美剧电影综艺动漫韩剧日剧英剧-网盘资源搜索-樱花动漫-人人影视</h1>
     </div>
-    <script type="text/javascript"
-      src="/public/banner.js"></script>
-    <script type="text/javascript"
-      src="//www.topcreativeformat.com/36067b6b90544153eabddefba54ef167/invoke.js"></script>
     <div class="max-w-[1240px] mx-auto mt-[20px]">
       <div class="w-[80%] md:w-[700px] mx-auto">
         <client-only>
@@ -104,6 +119,19 @@ onMounted(async () => {
       </p>
     </div>
 
+     <!-- Add a hidden div with SEO-friendly content -->
+     <div class="hidden">
+      <h2>热门资源搜索</h2>
+      <p>查找最新的美剧、电影、综艺、动漫、韩剧、日剧、英剧等资源。包括樱花动漫、人人影视等热门内容。</p>
+      <ul>
+        <li>樱花动漫 - 海量动漫资源</li>
+        <li>人人影视 - 优质影视资源</li>
+        <li>热门美剧下载</li>
+        <li>最新电影资源</li>
+        <li>综艺节目在线观看</li>
+        <li>韩剧日剧资源搜索</li>
+      </ul>
+    </div>
 
   </div>
 </template>
