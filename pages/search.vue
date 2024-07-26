@@ -81,6 +81,26 @@ const switchCategory = (e) => {
 
 onMounted(() => {
   handleSearch()
+
+   // Add ad script
+   const script = document.createElement('script');
+  script.innerHTML = `
+    atOptions = {
+      'key' : '48dfbbdc82cca3ac0986aced4bbd28ea',
+		  'format' : 'iframe',
+		  'height' : 90,
+		  'width' : 728,
+		  'params' : {}
+    };
+  `;
+  document.head.appendChild(script);
+
+  const adScript = document.createElement('script');
+  adScript.src = '//www.topcreativeformat.com/36067b6b90544153eabddefba54ef167/invoke.js';
+  adScript.async = true;
+  document.getElementById('ad-container').appendChild(adScript);
+ 
+
 })
 
 </script>
@@ -88,16 +108,6 @@ onMounted(() => {
 <template>
   <div class="dark:bg-gray-400 min-h-screen ">
     <search-header :keyword="keyword" @search="search"></search-header>
-    <script type="text/javascript">
-	atOptions = {
-		'key' : '36067b6b90544153eabddefba54ef167',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.topcreativeformat.com/36067b6b90544153eabddefba54ef167/invoke.js"></script>
     <div class="max-w-[1240px] mx-auto grid grid-cols-1 pb-8">
       <div class="w-full p-3">
         <el-button
@@ -116,6 +126,8 @@ onMounted(() => {
           在线观影
         </el-button>
       </div>
+            <!-- Ad script -->
+      <div id="ad-container"></div>
       <div v-if="category === 'clouddrive'"
            class="w-full space-y-3 p-3 ">
         <disk-info-list
