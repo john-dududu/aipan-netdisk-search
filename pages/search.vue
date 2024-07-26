@@ -88,6 +88,16 @@ onMounted(() => {
 <template>
   <div class="dark:bg-gray-400 min-h-screen ">
     <search-header :keyword="keyword" @search="search"></search-header>
+    <script type="text/javascript">
+	atOptions = {
+		'key' : '36067b6b90544153eabddefba54ef167',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.topcreativeformat.com/36067b6b90544153eabddefba54ef167/invoke.js"></script>
     <div class="max-w-[1240px] mx-auto grid grid-cols-1 pb-8">
       <div class="w-full p-3">
         <el-button

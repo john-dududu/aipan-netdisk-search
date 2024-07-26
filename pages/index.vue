@@ -69,6 +69,16 @@ onMounted(async () => {
       <h1 class="text-[18px] sm:text-[22px] font-serif font-bold dark:text-white ">搜网盘-热门美剧电影综艺动漫韩剧日剧英剧-网盘资源搜索</h1>
     </div>
 
+    <script type="text/javascript">
+	atOptions = {
+		'key' : '36067b6b90544153eabddefba54ef167',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.topcreativeformat.com/36067b6b90544153eabddefba54ef167/invoke.js"></script>
     <div class="max-w-[1240px] mx-auto mt-[20px]">
       <div
           class="w-[80%] md:w-[700px] mx-auto">
