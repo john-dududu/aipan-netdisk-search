@@ -132,7 +132,7 @@ onMounted(async () => {
     <div class="flex flex-row items-center justify-center gap-3 mt-[80px]">
       <img class="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px]" src="@/assets/my-logo.png" alt="logo">
       <h1 class="text-[18px] sm:text-[22px] font-serif font-bold dark:text-white ">
-        搜网盘-热门美剧电影综艺动漫韩剧日剧英剧-网盘资源搜索-樱花动漫-人人影视</h1>
+        搜网盘-热门美剧电影综艺动漫韩剧日剧英剧-网盘资源搜索</h1>
     </div>
     <div class="max-w-[1240px] mx-auto mt-[20px]">
       <div class="w-[80%] md:w-[700px] mx-auto">
@@ -179,7 +179,7 @@ onMounted(async () => {
     <!-- Add a hidden div with SEO-friendly content -->
     <div class="hidden">
       <h2>热门资源搜索</h2>
-      <p>查找最新的美剧、电影、综艺、动漫、韩剧、日剧、英剧等资源。包括樱花动漫、人人影视等热门内容。</p>
+      <p>查找最新的美剧、电影、综艺、动漫、韩剧、日剧、英剧等资源。包括樱花动漫、人人影视等热门内容。-樱花动漫-人人影视</p>
       <ul>
         <li>樱花动漫 - 海量动漫资源</li>
         <li>人人影视 - 优质影视资源</li>
