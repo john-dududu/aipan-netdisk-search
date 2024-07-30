@@ -30,6 +30,12 @@ export default defineNuxtConfig({
                     async: true
                 },
                 {
+                    src: 'https://alwingulla.com/88/tag.min.js',
+                    cfasync: 'false',
+                    zone: '83543',
+                    async: true,
+                },
+                {
                     src: '/ga.js'
                 },
                 {
