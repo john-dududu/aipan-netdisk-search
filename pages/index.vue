@@ -40,11 +40,6 @@ onMounted(async () => {
     doubanCache.value = 'exist'
   }
 
-  const meta = document.createElement('meta')
-  meta.name = 'baidu-site-verification'
-  meta.content = 'codeva-HQsJhwhYdf'
-  document.head.appendChild(meta)
-
 })
 </script>
 

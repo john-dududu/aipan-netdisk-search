@@ -7,7 +7,11 @@ export default defineNuxtConfig({
             meta: [
                 {
                     name: 'description',
-                    content: '搜网盘热门美剧电影综艺动漫韩剧日剧英剧-网盘资源搜索， 一个开源免费的网盘资源搜索程序，仅供学习使用，不支持商业用途。'
+                    content: '搜网盘热门美剧电影综艺动漫韩剧日剧英剧-网盘资源搜索-人人影视-樱花动漫-在线看动漫。'
+                },
+                {
+                    name: 'baidu-site-verification',
+                    content: 'codeva-HQsJhwhYdf'
                 },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
                 {
