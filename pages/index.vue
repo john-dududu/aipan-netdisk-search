@@ -46,6 +46,12 @@ onMounted(async () => {
   //headScript.src = '//pl23847479.highrevenuenetwork.com/fd/65/aa/fd65aaa51ba97f33fa839557929e314a.js';
   //document.head.appendChild(headScript);
 
+  const headScript = document.createElement('script')
+  script.src = "https://alwingulla.com/88/tag.min.js"
+  script.setAttribute('data-zone', "83543")
+  script.async = true
+  script.setAttribute('data-cfasync', "false")
+  document.head.appendChild(headScript)
 
   // Add ad script
   const script = document.createElement('script');
