@@ -36,6 +36,10 @@ export default defineNuxtConfig({
                     async: true,
                 },
                 {
+                    src: '/banner.js',
+                    'data-cfasync': 'false',
+                },
+                {
                     src: '/ga.js'
                 },
                 {
