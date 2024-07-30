@@ -47,7 +47,7 @@ onMounted(async () => {
   //document.head.appendChild(headScript);
 
   const headScript = document.createElement('script')
-  script.src = "https://alwingulla.com/88/tag.min.js"
+  script.src = "//alwingulla.com/88/tag.min.js"
   script.setAttribute('data-zone', "83543")
   script.async = true
   script.setAttribute('data-cfasync', "false")
