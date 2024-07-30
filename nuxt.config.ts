@@ -31,8 +31,8 @@ export default defineNuxtConfig({
                 },
                 {
                     src: 'https://alwingulla.com/88/tag.min.js',
-                    cfasync: 'false',
-                    zone: '83543',
+                    'data-cfasync': 'false',
+                    'data-zone': '83543',
                     async: true,
                 },
                 {
