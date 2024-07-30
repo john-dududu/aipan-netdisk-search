@@ -40,71 +40,11 @@ onMounted(async () => {
     doubanCache.value = 'exist'
   }
 
-  // Add ad script
-  const script = document.createElement('script');
-  script.innerHTML = `
-    atOptions = {
-      'key' : '36067b6b90544153eabddefba54ef167',
-	  	'format' : 'iframe',
-	  	'height' : 60,
-	  	'width' : 468,
-	  	'params' : {}
-    };
-  `;
-  document.head.appendChild(script);
-
-
-  // Add side ad scripts
-  const sideScript = document.createElement('script');
-  sideScript.innerHTML = `
-    atOptions = {
-      'key' : 'dadd81d317149856ad54536ba36c5b40',
-      'format' : 'iframe',
-      'height' : 600,
-      'width' : 160,
-      'params' : {}
-    };
-  `;
-  document.head.appendChild(sideScript);
-
-  const leftAdScript = document.createElement('script');
-  leftAdScript.src = '//www.topcreativeformat.com/dadd81d317149856ad54536ba36c5b40/invoke.js';
-  leftAdScript.async = true;
-  document.getElementById('left-ad-container').appendChild(leftAdScript);
-
-  // const rightAdScript = document.createElement('script');
-  // rightAdScript.src = '//www.topcreativeformat.com/dadd81d317149856ad54536ba36c5b40/invoke.js';
-  // rightAdScript.async = true;
-  // document.getElementById('right-ad-container').appendChild(rightAdScript);
-
-
-  const adScript = document.createElement('script');
-  adScript.src = '//www.topcreativeformat.com/36067b6b90544153eabddefba54ef167/invoke.js';
-  adScript.async = true;
-  document.getElementById('ad-container').appendChild(adScript);
-
-  // Add new script before </body>
-  const newScript = document.createElement('script');
-  newScript.type = 'text/javascript';
-  newScript.src = '//pl23847459.highrevenuenetwork.com/c9/dd/2c/c9dd2cec63b70fe295a2c5ed2fa110bf.js';
-
-  // Use nextTick to ensure the DOM is fully rendered
-  nextTick(() => {
-    document.body.appendChild(newScript);
-  });
-
 })
 </script>
 
 <template>
-  <div class="bg-[#ffffff] dark:bg-gray-800  min-h-screen py-[60px]">
-
-    <!-- Left side ad -->
-    <div id="left-ad-container" class="fixed left-0 top-1/2 transform -translate-y-1/2 z-10 hidden lg:block"></div>
-
-    <!-- Right side ad -->
-    <div id="right-ad-container" class="fixed right-0 top-1/2 transform -translate-y-1/2 z-10 hidden lg:block"></div>
-
+  <div class="bg-[#ffffff] dark:bg-gray-800  min-h-screen py-[60px]"> 
 
     <div class="max-w-[1240px] mx-auto text-right px-[20px]">
       <client-only>
@@ -130,8 +70,7 @@ onMounted(async () => {
         </client-only>
       </div>
     </div>
-    <!-- Ad script -->
-    <div id="ad-container" class="my-8 flex justify-center"></div>
+ 
     <div class="mx-5 xl:max-w-[1200px] xl:mx-auto mt-[50px]" v-if="doubanData.length > 0">
       <h1 class="text-[12px] sm:text-sm text-slate-600 font-bold dark:text-white mt-[20px]">豆瓣热门影视榜单</h1>
 
