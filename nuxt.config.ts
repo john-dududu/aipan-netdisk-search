@@ -31,14 +31,11 @@ export default defineNuxtConfig({
                 },
                 {
                     src: 'https://alwingulla.com/88/tag.min.js',
+                    async: true,
                     'data-cfasync': 'false',
                     'data-zone': '83543',
-                    async: true,
-                },
-                {
-                    src: '/banner.js',
-                    'data-cfasync': 'false',
-                },
+                 
+                }, 
                 {
                     src: '/ga.js'
                 },
