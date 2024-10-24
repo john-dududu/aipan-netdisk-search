@@ -33,13 +33,13 @@ export default defineNuxtConfig({
                     src: 'https://www.googletagmanager.com/gtag/js?id=G-D88MP2QBSH',
                     async: true
                 },
-                {
-                    src: 'https://alwingulla.com/88/tag.min.js',
-                    async: true,
-                    'data-cfasync': 'false',
-                    'data-zone': '83543',
+                // {
+                //     src: 'https://alwingulla.com/88/tag.min.js',
+                //     async: true,
+                //     'data-cfasync': 'false',
+                //     'data-zone': '83543',
                  
-                }, 
+                // }, 
                 {
                     src: '/ga.js'
                 },
