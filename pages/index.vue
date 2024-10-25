@@ -61,13 +61,14 @@ onMounted(async () => {
       <img class="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px]" src="@/assets/my-logo.png" alt="logo">
       <h1 class="text-[18px] sm:text-[22px] font-serif font-bold dark:text-white ">
         搜网盘-热门美剧电影综艺动漫韩剧日剧英剧-网盘资源搜索</h1>
-        <div style="padding: 10px; margin: 10px 0;text-align: center;">
+   
+    </div>
+    <div class="max-w-[1240px] mx-auto mt-[20px]">
+      <div style="padding: 10px; margin: 10px 0;text-align: center;">
           <a href="https://www.wyco0f.com:9033/register61758/?i_code=3493249" target="_blank">
           <img class="" src="https://img10.360buyimg.com/ddimg/jfs/t1/216933/21/43725/48687/66fc00d5Facc9713b/1108bdfd8de34c83.jpg" alt="Banner Image" style="max-width: 100%; height: 200px;" loading="eager" >
 	        </a>
         </div>
-    </div>
-    <div class="max-w-[1240px] mx-auto mt-[20px]">
       <div class="w-[80%] md:w-[700px] mx-auto">
         <client-only>
           <el-input v-model="searchKeyword" placeholder="请输入关键词搜索" @keydown.enter="search(searchKeyword)"
