@@ -65,9 +65,10 @@ onMounted(async () => {
     </div>
     <div class="max-w-[1240px] mx-auto mt-[20px]">
       <div class="flex flex-row items-center justify-center">
-          <a href="https://www.wyco0f.com:9033/register61758/?i_code=3493249" target="_blank">
+          <a href="https://souwangpan.pro/jump" target="_blank">
           <img class="" src="https://img10.360buyimg.com/ddimg/jfs/t1/216933/21/43725/48687/66fc00d5Facc9713b/1108bdfd8de34c83.jpg" alt="Banner Image" style="max-width: 100%; height: 200px;" loading="eager" >
 	        </a>
+          <br/>
         </div>
       <div class="w-[80%] md:w-[700px] mx-auto">
         <client-only>
