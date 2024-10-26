@@ -14,5 +14,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>正在跳转...</div>
+  <div id="ad-container" class="my-8 flex justify-center" >正在跳转...</div>
 </template>
